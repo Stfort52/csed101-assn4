@@ -10,7 +10,6 @@ def entropize(image, rdiff = (0,0), gdiff = (0,0)):
     rr = r.crop(redge)
     gg = g.crop(gedge)
     bb = b.crop(bedge)
-    print (rr.size, gg.size, bb.size)
     merge = Image.merge("RGB", (rr,gg,bb))
     return merge
 
