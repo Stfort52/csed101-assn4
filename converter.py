@@ -1,5 +1,3 @@
-from platform import system as whoareyou
-
 def stream2ASCII(f, filename = None, encoding = "ANSI"):
     assert "b" in f.mode , "Requires a Bytes Stream"
     assert b"P6\x0a" == f.read(3), "Not a Valid binary ppm file"
@@ -40,9 +38,4 @@ def ASCII2bin(infile, outfile = None, encoding = "ANSI"):
     stream2bin(open(infile, "r", encoding = encoding), outfile, encoding = encoding)
 
 
-    
-if __name__ == "__main__":
-    print("hello")
-    if whoareyou() == "Darwin":
-        print("fk you!")
-    
+
